@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
 
-function comments (){
+function Comments (){
 
     const [commentsText, setCommentsText] = useState ('');
     const dispatch = useDispatch ();
@@ -32,4 +32,4 @@ function comments (){
     )
 };
 
-export default comments;
+export default Comments;

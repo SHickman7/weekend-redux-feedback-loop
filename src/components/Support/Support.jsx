@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
 
-function support (){
+function Support (){
 
     const [supportRating, setSupportRating] = useState ('');
     const dispatch = useDispatch ();
@@ -33,4 +33,4 @@ function support (){
     )
 };
 
-export default support;
+export default Support;

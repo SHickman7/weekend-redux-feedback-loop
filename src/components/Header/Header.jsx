@@ -1,6 +1,6 @@
 import '../App/App.css';
 
-function header(){
+function Header(){
     return(
         <>
         <header className='App-header'>
@@ -12,4 +12,4 @@ function header(){
     )
 }
 
-export default header;
+export default Header;

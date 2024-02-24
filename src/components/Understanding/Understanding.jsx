@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
 
-function understanding (){
+function Understanding (){
 
     const [understandingRating, setUnderstandingRating] = useState ('');
     const dispatch = useDispatch ();
@@ -33,4 +33,4 @@ function understanding (){
     )
 };
 
-export default understanding;
+export default Understanding;

@@ -8,38 +8,42 @@ import Feeling from "../Feeling/Feeling";
 import Understanding from "../Understanding/Understanding";
 import Support from "../Support/Support";
 import Comments from "../Comments/Comments";
+import Review from "../Review/Review";
+import SubmissionSuccess from "../SubmissionSuccess/SubmissionSuccess";
 //import Understanding from "../Understanding/Understanding";
 import { useState, useEffect } from "react";
 
 function App() {
 
-  const [feedbackProfile, setFeedbackProfile] = useState ({})
-
-
-  const dispatch = useDispatch ();
 
  
 
   return (
     <Router>
       <div className='App'>
-        <Route path="/" exact>
-          <Header />
-          <Feeling />
-        </Route>
-        <Route path="/understanding">
-          <Header />
-          <Understanding />
-        </Route>
-        <Route path="/support">
-          <Header />
-          <Support />
-        </Route>
-        <Route path="/comments">
-          <Header />
-          <Comments />
-        </Route>
-    </div>
+          <Route path="/" exact>
+            <Header />
+            <Feeling />
+          </Route>
+          <Route path="/understanding">
+            <Header />
+            <Understanding />
+          </Route>
+          <Route path="/support">
+            <Header />
+            <Support />
+          </Route>
+          <Route path="/comments">
+            <Header />
+            <Comments />
+          </Route>
+          <Route path="/review">
+            <Review />
+          </Route>
+          <Route path="/submissionSuccess">
+            <SubmissionSuccess />
+          </Route>
+      </div>
     </Router>
   );
 }
