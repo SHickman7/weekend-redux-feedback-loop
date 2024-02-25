@@ -6,7 +6,6 @@ function Review(){
 
     const history = useHistory();
     const dispatch = useDispatch();
-    // const feedbackProfileInfo = useSelector(store => store.feedbackProfile);
     const feelingInfo = useSelector (store => store.feelingInfo);
     const understandingInfo = useSelector (store => store.understandingInfo);
     const supportInfo = useSelector (store => store.supportInfo);
@@ -16,14 +15,16 @@ function Review(){
 
     const submit = () => {
 
+        let feedback = {feeling: feelingInfo.feelingRating, understanding: understandingInfo.understandingRating, support: supportInfo.supportRating, comments: commentsInfo.commentsText}
+
         axios({
             method: 'POST',
             url: '/api/feedback',
-            data: {feeling: feelingInfo.feelingRating, understanding: understandingInfo.understandingRating, support: supportInfo.supportRating, comments: commentsInfo.commentsText}
+            data: feedback
         
         }).then(response => {
             console.log('Successful POST', response);
-            history.push('/SubmissionSuccess');
+            history.push('/ThankyouScreen');
         }).catch(error => {
             console.log('Error sending feedback', error);
         });
@@ -33,11 +34,11 @@ function Review(){
     return(
         <>
             <h2>Review Your Feedback</h2>
-            <p>Feelings: {feelingInfo.feelingRating}</p>
+            <p>Feeling: {feelingInfo.feelingRating}</p>
             <p>Understanding: {understandingInfo.understandingRating}</p>
             <p>Support: {supportInfo.supportRating}</p>
-            <p>Comments:{commentsInfo.commentsText}</p>
-            <button className="submit_button" onClick={submit}data-testid="next">Submit</button>
+            <p>Comments: {commentsInfo.commentsText}</p>
+            <button onClick={submit} data-testid="next">Submit</button>
         
         </>
     )

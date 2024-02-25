@@ -4,7 +4,7 @@ import '../App/App.css';
 
 
 
-function SubmissionSuccess(){
+function ThankyouScreen(){
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -41,4 +41,4 @@ function SubmissionSuccess(){
     )
 }
 
-export default SubmissionSuccess;
+export default ThankyouScreen;

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 
 function Support (){
 
-    const [supportRating, setSupportRating] = useState ('');
+    const [supportRating, setSupportRating] = useState ("");
     const dispatch = useDispatch ();
     const history = useHistory();
 
@@ -26,7 +26,7 @@ function Support (){
             <input 
                  type = "number" min="1" max="5"
                  value = {supportRating}
-                 onChange = {(event) => setSupportRating(event.target.value)}
+                 onChange = {(event) => setSupportRating(Number(event.target.value))}
                  style = {styles.input}
                  required
                  data-testid="input" 

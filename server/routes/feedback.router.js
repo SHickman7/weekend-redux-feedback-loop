@@ -16,6 +16,7 @@ router.post('/', (req, res) => {
 
     pool.query(sqlText, sqlValues)
     .then((dbRes) => {
+      console.log('Successfully added new feedback', dbRes);
       res.sendStatus(201);
     })
     .catch((dbErr) => {

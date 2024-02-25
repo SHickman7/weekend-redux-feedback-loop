@@ -17,7 +17,7 @@ const understandingInfo = (state = {}, action) => {
         if (action.type === 'ADD_UNDERSTANDING'){
                 return action.payload;
         }
-        if (action.type === 'CLEAR_UNDERSTANDDING'){
+        if (action.type === 'CLEAR_UNDERSTANDING'){
                 return {};
         }
         return state;
