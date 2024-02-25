@@ -19,10 +19,11 @@ function Understanding (){
                 onChange = {(event) => setUnderstandingRating(Number(event.target.value))}
                 data-testid="input"
                 />
-            <button onClick = {() => {
-                dispatch({
-                    type: "ADD_UNDERSTANDING",
-                    payload: {understandingRating}
+                <button onClick = {(event) => {
+                    event.preventDefault();
+                    dispatch({
+                        type: "ADD_UNDERSTANDING",
+                        payload: {understandingRating}
                 })
                 history.push('/support');
             }} 

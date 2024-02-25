@@ -23,7 +23,8 @@ function Comments (){
                 style = {styles.input}
                 data-testid="input"
                 />
-            <button onClick = {() => {
+            <button onClick = {(event) => {
+                event.preventDefault();
                 dispatch({
                     type: "ADD_COMMENTS",
                     payload: {commentsText}

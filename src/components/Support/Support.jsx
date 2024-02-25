@@ -31,7 +31,8 @@ function Support (){
                  required
                  data-testid="input" 
                 />
-            <button onClick = {() => {
+            <button onClick = {(event) => {
+                event.preventDefault();
                 dispatch({
                     type: "ADD_SUPPORT",
                     payload: {supportRating}
