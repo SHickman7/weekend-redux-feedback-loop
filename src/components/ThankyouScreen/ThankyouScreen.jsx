@@ -31,10 +31,8 @@ function ThankyouScreen(){
 
         <>
         <p className='feedback_box'>Feedback!</p>
-
-        <p className='thankyou_box'>Thank you!
-
-        <button onClick={startOver}data-testid="next">Leave New Feedback</button>
+        <p className='thankyou_box'>Thank you!<br></br><br></br>
+        <button onClick={startOver}data-testid="next" className='next_button'>Leave New Feedback</button>
         </p>
         </>
 

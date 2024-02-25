@@ -20,6 +20,7 @@ function Feeling (){
                     value = {feelingRating}
                     onChange = {(event) => setFeelingRating(Number(event.target.value))}
                     data-testid="input"
+                    className='required_input'
                     />
                 <button onClick = {(event) => {
                     event.preventDefault();
@@ -28,7 +29,8 @@ function Feeling (){
                         payload: {feelingRating},
                     })
                     history.push('/understanding');
-                }} 
+                }}
+                className='next_button' 
                 data-testid="next">Next</button>
             </form>
         </>

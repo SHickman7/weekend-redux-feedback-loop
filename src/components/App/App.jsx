@@ -1,7 +1,5 @@
 import { HashRouter as Router, Route } from 'react-router-dom';
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import axios from 'axios';
 import './App.css';
 import Header from "../Header/Header";
 import Feeling from "../Feeling/Feeling";
@@ -10,25 +8,9 @@ import Support from "../Support/Support";
 import Comments from "../Comments/Comments";
 import Review from "../Review/Review";
 import ThankyouScreen from "../ThankyouScreen/ThankyouScreen";
-import { useState, useEffect } from "react";
+
 
 function App() {
-
-// const [feedbackList, setFeedbackList] = useState([]);
-
-// const getFeedbackList = () =>{
-//   axios
-//   .get("/api/feedback")
-//   .then((response) => {
-//     console.log("GET request was successful", response.data)
-//     setFeedbackList(response.data);
-//   })
-//   .catch((err) => {
-//     console.log("GET error in getting feedbackList", err);
-//   });
-// };
-// //On load, get list
-// useEffect(getFeedbackList, []);
  
 
   return (

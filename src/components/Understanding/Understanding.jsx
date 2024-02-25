@@ -18,6 +18,7 @@ function Understanding (){
                 value = {understandingRating}
                 onChange = {(event) => setUnderstandingRating(Number(event.target.value))}
                 data-testid="input"
+                className='required_input'
                 />
                 <button onClick = {(event) => {
                     event.preventDefault();
@@ -26,7 +27,8 @@ function Understanding (){
                         payload: {understandingRating}
                 })
                 history.push('/support');
-            }} 
+            }}
+            className='next_button' 
             data-testid="next">Next</button>
         </form>
         </>

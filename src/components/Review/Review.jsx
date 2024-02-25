@@ -38,7 +38,7 @@ function Review(){
             <p>Understanding: {understandingInfo.understandingRating}</p>
             <p>Support: {supportInfo.supportRating}</p>
             <p>Comments: {commentsInfo.commentsText}</p>
-            <button onClick={submit} data-testid="next">Submit</button>
+            <button onClick={submit} data-testid="next" className='next_button'>Submit</button>
         
         </>
     )
