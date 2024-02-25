@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
       res.sendStatus(201);
     })
     .catch((dbErr) => {
-      console.log(`Error adding new book`, dbErr);
+      console.log(`Error adding new feedback`, dbErr);
       res.sendStatus(500);
     });
 });

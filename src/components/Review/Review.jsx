@@ -23,9 +23,9 @@ function Review(){
         
         }).then(response => {
             console.log('Successful POST', response);
-            history.push('/submissionSuccess');
+            history.push('/SubmissionSuccess');
         }).catch(error => {
-            console.log('Error sending feedback profile', error);
+            console.log('Error sending feedback', error);
         });
     }
 
@@ -37,7 +37,7 @@ function Review(){
             <p>Understanding: {understandingInfo.understandingRating}</p>
             <p>Support: {supportInfo.supportRating}</p>
             <p>Comments:{commentsInfo.commentsText}</p>
-            <button onClick={submit}>Submit</button>
+            <button className="submit_button" onClick={submit}data-testid="next">Submit</button>
         
         </>
     )

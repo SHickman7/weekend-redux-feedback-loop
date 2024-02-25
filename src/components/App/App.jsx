@@ -10,12 +10,25 @@ import Support from "../Support/Support";
 import Comments from "../Comments/Comments";
 import Review from "../Review/Review";
 import SubmissionSuccess from "../SubmissionSuccess/SubmissionSuccess";
-//import Understanding from "../Understanding/Understanding";
 import { useState, useEffect } from "react";
 
 function App() {
 
+const [feedbackList, setFeedbackList] = useState([]);
 
+const getFeedbackList = () =>{
+  axios
+  .get("/api/feedback")
+  .then((response) => {
+    console.log("GET request was successful", response.data)
+    setFeedbackList(response.data);
+  })
+  .catch((err) => {
+    console.log("GET error in getting feedbackList", err);
+  });
+};
+//On load, get list
+useEffect(getFeedbackList, []);
  
 
   return (
@@ -40,7 +53,7 @@ function App() {
           <Route path="/review">
             <Review />
           </Route>
-          <Route path="/submissionSuccess">
+          <Route path="/SubmissionSuccess">
             <SubmissionSuccess />
           </Route>
       </div>

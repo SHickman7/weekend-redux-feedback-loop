@@ -21,3 +21,69 @@
 h4 {
   font-style: italic;
 }
+
+.feedback_box{
+  border: 3px solid black;
+  padding: 30px;
+  margin: 20px;
+}
+
+.thankyou_box{
+  border: 3px solid black;
+  padding: 30px;
+
+}
+
+
+
+  .required_input {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 50px;
+      border-radius: 8px;
+  }
+
+  .required_next{
+    background-color: #033076;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 10px 0px grey;
+
+  }
+ .submit_button{
+  background-color: #033076;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 0px 10px 0px grey;
+
+ }
+
+.disabledButton {
+background-color: gray;
+color: white;
+cursor: not-allowed;
+margin: 10px;
+padding: 15px;
+border-radius: 8px;
+border: none;
+box-shadow: 0px 0px 10px 0px grey;
+}
+
+/* .enabledButton {
+  backgroundColor: '#033076',
+  color: 'white',
+  cursor: 'pointer',
+  margin: 10,
+  padding: 15,
+  borderRadius: "8px",
+  border: "none",
+  boxShadow: "0px 0px 10px 0px grey",
+}, */
